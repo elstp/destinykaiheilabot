@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class WebHookServiceImpl implements WebHookService {
-public static String SN = "";
+public static long SN = 0;
     @Override
     public JSONObject webHook(JSONObject jsonObject) {
         if (null==jsonObject){
@@ -74,11 +74,10 @@ public static String SN = "";
      */
     static void webhookGroupMsg(JSONObject object){
         if ("GROUP".equals(object.getJSONObject("d").getString("channel_type"))){
-            if (!SN.equals(object.getString("sn"))){
-                SN = object.getString("sn");
+            if (  object.getLong("sn")> SN ){
+                SN = object.getLong("sn");
                 robotUtil.processMsg(object);
             }
-
         }
     }
 
