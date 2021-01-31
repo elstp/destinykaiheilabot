@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  #设置响应为utf-8
+  servlet:
+    encoding:
+      force-response: true
+robot:
+  #机器人token
+  token: 1/MTAxMzc=/ygZMSkXjAhqfvzgXTuPfbw==
+  #机器人encryptKey
+  encryptKey: "xNVfOP6ZWRp"
+  #机器人加密偏移量
+  iv: 0012346521232145
+  #机器人校验token
+  veriftoken: 25G2YYhzQpdawrOq
+  armaserver:
+    特别行动-150.138.72.34-2303,逃离-150.138.72.34-4303,BRPVP-150.138.72.34-6667,战队服-150.138.72.34-7303
+web-socketio:
+  #OPQ机器人地址 socket地址
+  host: "https://www.kaiheila.cn/api/v3/"
+
